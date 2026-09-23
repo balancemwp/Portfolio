@@ -9,6 +9,9 @@
       <a href="#expertise">Expertise</a>
       <a href="#work">Selected work</a>
       <a href="#experience">Experience</a>
+      <button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-label]="isLightMode ? 'Switch to dark mode' : 'Switch to light mode'">
+        <span aria-hidden="true">{{ isLightMode ? '☾' : '☼' }}</span> {{ isLightMode ? 'Dark' : 'Light' }}
+      </button>
       <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
     </div>
   </nav>
