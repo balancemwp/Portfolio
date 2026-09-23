@@ -1,0 +1,44 @@
+ <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">04 / Experience</p>
+        <span class="section-line"></span>
+      </div>
+      <div class="split-heading">
+        <h2 id="experience-title">A career of<br /><em>useful momentum.</em></h2>
+        <p>
+          Scannable by design: roles, context, and the technologies that made the work possible.
+        </p>
+      </div>
+      <div class="timeline">
+        @for (item of experience; track item.organization) {
+          <article class="timeline-item">
+            <div class="timeline-period">{{ item.period }}</div>
+            <div class="timeline-content">
+              <h3>{{ item.organization }}</h3>
+              <p class="role">{{ item.role }}</p>
+              <p>{{ item.summary }}</p>
+              <div class="tag-list">
+                @for (technology of item.technologies; track technology) {
+                  <span>{{ technology }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        }
+        <article class="timeline-item earlier">
+          <div class="timeline-period">1998 — 2016</div>
+          <div class="timeline-content">
+            <h3>Earlier consulting & engineering</h3>
+            <p class="role">Senior Software Engineer · Consultant · Developer</p>
+            <p>{{ earlierExperience }}</p>
+            <p class="earlier-note">
+              Organizations included Chesterfield County IST, BB&amp;T, Enterbridge Technology,
+              Virginia Division of Child Support Enforcement, Impact Makers, Whitlock, Core
+              Consulting, Markel Corporation, First Northern National Bank, and Circuit City.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>

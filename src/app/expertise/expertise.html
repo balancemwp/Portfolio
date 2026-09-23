@@ -1,0 +1,28 @@
+ <section class="section expertise-section" id="expertise" aria-labelledby="expertise-title">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Expertise</p>
+        <span class="section-line"></span>
+      </div>
+      <div class="split-heading">
+        <h2 id="expertise-title">Built to see<br /><em>the whole system.</em></h2>
+        <p>
+          From technical strategy to the last deployment, I bring architecture, engineering, and
+          delivery into the same conversation.
+        </p>
+      </div>
+      <div class="expertise-grid">
+        @for (area of expertise; track area.label; let i = $index) {
+          <article class="expertise-card">
+            <span class="card-number">0{{ i + 1 }}</span>
+            <h3>{{ area.label }}</h3>
+            <ul>
+              @for (item of area.items; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </div>
+  </section>

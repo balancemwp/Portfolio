@@ -1,0 +1,31 @@
+
+  <section class="section work-section shell" id="work" aria-labelledby="work-title">
+    <div class="section-heading">
+      <p class="eyebrow">03 / Selected work</p>
+      <span class="section-line"></span>
+    </div>
+    <div class="split-heading">
+      <h2 id="work-title">A few problems<br /><em>worth solving.</em></h2>
+      <p>
+        Selected, anonymized examples from work described in my resume. Confidential details stay
+        confidential; the delivery lessons remain useful.
+      </p>
+    </div>
+    <div class="case-study-list">
+      @for (study of caseStudies; track study.number) {
+        <article class="case-study">
+          <div class="case-number">{{ study.number }}</div>
+          <div class="case-main">
+            <p class="case-context">{{ study.context }}</p>
+            <h3>{{ study.title }}</h3>
+            <p>{{ study.contribution }}</p>
+            <span class="case-stack">{{ study.stack }}</span>
+          </div>
+          <div class="case-challenge">
+            <span>Challenge</span>
+            <p>{{ study.challenge }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>

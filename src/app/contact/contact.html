@@ -1,0 +1,63 @@
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="shell contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow">06 / Contact</p>
+        <h2 id="contact-title">Have a complex<br /><em>problem in mind?</em></h2>
+        <p>
+          For contract inquiries, tell me a little about the opportunity. Your email client will
+          open with the details ready to send.
+        </p>
+        <div class="contact-details">
+          <a href="mailto:martin@shapeconsulting.com">martin&#64;shapeconsulting.com</a
+          ><a href="tel:+18042011302">804.201.1302</a><span>Crozier, Virginia</span>
+        </div>
+        <div class="social-links">
+          <a href="{{ linkedIn }}" target="_blank" aria-label="LinkedIn placeholder"
+            >LinkedIn <small>{{ linkedIn }}</small></a
+          ><a href="{{ github }}" target="_blank" aria-label="GitHub placeholder"
+            >GitHub <small>{{ github }}</small></a
+          >
+        </div>
+      </div>
+      <form
+        #contactForm="ngForm"
+        class="contact-form"
+        (ngSubmit)="submitContact(contactForm)"
+        novalidate
+      >
+        <label for="name">Your name <span>*</span></label
+        ><input id="name" name="name" [(ngModel)]="form.name" required placeholder="Jane Smith" />
+        <label for="email">Email address <span>*</span></label
+        ><input
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="form.email"
+          required
+          email
+          placeholder="someone@company.com"
+        />
+        <label for="opportunity">Opportunity type <span>*</span></label
+        ><select id="opportunity" name="opportunity" [(ngModel)]="form.opportunity" required>
+          <option value="" disabled>Select one</option>
+          <option>Technical leadership</option>
+          <option>Solution architecture</option>
+          <option>Application modernization</option>
+          <option>Software engineering</option>
+          <option>Something else</option>
+        </select>
+        <label for="message">A little about the work <span>*</span></label
+        ><textarea
+          id="message"
+          name="message"
+          [(ngModel)]="form.message"
+          required
+          rows="5"
+          placeholder="What are you working on?"
+        ></textarea>
+        <button class="button button-primary" type="submit">
+          Open email draft <span aria-hidden="true">↗</span>
+        </button>
+      </form>
+    </div>
+  </section>
