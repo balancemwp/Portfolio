@@ -26,7 +26,7 @@ interface CaseStudy {
 })
 export class App {
   @HostBinding('class.light-theme')
-  protected isLightMode = localStorage.getItem('portfolio-theme') === 'light';
+  protected isLightMode = localStorage.getItem('portfolio-theme') !== 'dark';
 
   protected readonly email = 'martin@shapeconsulting.com';
   protected readonly phone = '804.201.1302';
