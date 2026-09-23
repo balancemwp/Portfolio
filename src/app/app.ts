@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 interface Experience {
@@ -25,8 +25,16 @@ interface CaseStudy {
   styleUrl: './app.css',
 })
 export class App {
+  @HostBinding('class.light-theme')
+  protected isLightMode = localStorage.getItem('portfolio-theme') !== 'dark';
+
   protected readonly email = 'martin@shapeconsulting.com';
   protected readonly phone = '804.201.1302';
+
+  protected toggleTheme(): void {
+    this.isLightMode = !this.isLightMode;
+    localStorage.setItem('portfolio-theme', this.isLightMode ? 'light' : 'dark');
+  }
 
   protected readonly expertise = [
     {
