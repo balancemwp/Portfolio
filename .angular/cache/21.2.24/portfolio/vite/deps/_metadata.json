@@ -1,0 +1,34 @@
+{
+  "hash": "1346ed7a",
+  "configHash": "9d11e82b",
+  "lockfileHash": "bf3a2e64",
+  "browserHash": "054956a0",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "4c30a1c0",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "7852a0c8",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "ef677bc5",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-F5CAL2CS": {
+      "file": "chunk-F5CAL2CS.js"
+    },
+    "chunk-PHITU2BM": {
+      "file": "chunk-PHITU2BM.js"
+    }
+  }
+}
