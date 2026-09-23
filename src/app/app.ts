@@ -30,6 +30,8 @@ export class App {
 
   protected readonly email = 'martin@shapeconsulting.com';
   protected readonly phone = '804.201.1302';
+  protected readonly linkedIn = 'https://www.linkedin.com/in/shapeconsulting/';
+  protected readonly github = 'https://github.com/balancemwp/';
 
   protected toggleTheme(): void {
     this.isLightMode = !this.isLightMode;
